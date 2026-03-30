@@ -1,0 +1,9 @@
+import React from 'react'
+
+export default function folder({stroke, width, height}: {stroke?: string, width?: number, height?: number}) {
+  return (
+    <svg width={width || "60"} height={height || "59"} viewBox="0 0 60 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 49.1668C8.625 49.1668 7.44792 48.6854 6.46875 47.7226C5.48958 46.7597 5 45.6022 5 44.2502V14.7502C5 13.3981 5.48958 12.2406 6.46875 11.2778C7.44792 10.3149 8.625 9.8335 10 9.8335H25L30 14.7502H50C51.375 14.7502 52.5521 15.2316 53.5313 16.1944C54.5104 17.1573 55 18.3147 55 19.6668V44.2502C55 45.6022 54.5104 46.7597 53.5313 47.7226C52.5521 48.6854 51.375 49.1668 50 49.1668H10ZM10 44.2502H50V19.6668H27.9375L22.9375 14.7502H10V44.2502Z" fill={stroke ||"#1D1B20"}/>
+    </svg>
+  )
+}
