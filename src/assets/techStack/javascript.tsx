@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default function javascript({ className }: { className?: string }) {
   return (

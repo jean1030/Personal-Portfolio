@@ -1,4 +1,3 @@
-import Quiztopia from '../../assets/Quiztopia.png';
 import Quiztopia1 from '../../assets/Projects/14.png';
 import Quiztopia2 from '../../assets/Projects/15.png';
 import Quiztopia3 from '../../assets/Projects/16.png';

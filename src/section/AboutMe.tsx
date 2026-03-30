@@ -1,4 +1,3 @@
-import profile from '../assets/me.png';
 import SparkleIcon from '../assets/sparkleIcon';
 import vscode from '../assets/techStack/vscode';
 import css from '../assets/techStack/css';
@@ -13,8 +12,7 @@ import react from '../assets/techStack/react';
 import shadcn from '../assets/techStack/shadcn';
 import supabase from '../assets/techStack/supabase';
 import tailwind from '../assets/techStack/tailwind';
-import { TechIcon } from '../components/TechIcon';
-import { ToolBoxItems } from '../components/ToolBoxItems';
+ import { ToolBoxItems } from '../components/ToolBoxItems';
 import Lanyard from "../assets/lanyard/lanyard";
 
 const tools = [

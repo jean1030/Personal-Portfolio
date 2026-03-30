@@ -1,5 +1,4 @@
-import TriVoca from '../../assets/TriVoca.png';
-import Trivoca1 from '../../assets/Projects/1.png';
+ import Trivoca1 from '../../assets/Projects/1.png';
 import Trivoca2 from '../../assets/Projects/2.png';
 import Trivoca3 from '../../assets/Projects/3.png';
 import Trivoca4 from '../../assets/Projects/4.png';

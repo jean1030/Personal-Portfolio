@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function css({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 872 721" xmlns="http://www.w3.org/2000/svg">

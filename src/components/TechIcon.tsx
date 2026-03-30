@@ -1,4 +1,4 @@
-export const TechIcon = ({ component} : { component: React.ElementType }) => {
+export const TechIcon = ({ component} : { component: React.ComponentType<{ className?: string }> }) => {
     const IconComponent = component;
     return(
     <>

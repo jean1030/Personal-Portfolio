@@ -1,5 +1,4 @@
-import React from 'react'
-
+ 
 export default function folder({stroke, width, height}: {stroke?: string, width?: number, height?: number}) {
   return (
     <svg width={width || "60"} height={height || "59"} viewBox="0 0 60 59" fill="none" xmlns="http://www.w3.org/2000/svg">

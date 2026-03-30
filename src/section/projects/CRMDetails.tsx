@@ -1,5 +1,4 @@
-import CRM from '../../assets/CRM.png';
-import CRM1 from '../../assets/Projects/6.png';
+ import CRM1 from '../../assets/Projects/6.png';
 import CRM2 from '../../assets/Projects/7.png';
 import CRM3 from '../../assets/Projects/8.png';
 import CRM4 from '../../assets/Projects/9.png';

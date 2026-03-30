@@ -1,5 +1,4 @@
-import React from 'react'
-
+ 
 export default function vscode({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 3840 3840" xmlns="http://www.w3.org/2000/svg">

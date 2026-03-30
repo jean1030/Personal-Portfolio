@@ -7,7 +7,6 @@ type SparkleIconProps = {
 }
 
 export default function sparkleIcon({
-  stroke,   
   fill,
   className,
 }: SparkleIconProps) {
