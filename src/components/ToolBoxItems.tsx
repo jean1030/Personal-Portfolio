@@ -1,7 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 import { TechIcon } from "./TechIcon";
 
-export const ToolBoxItems = ({ items, className, itemsWrapperClassName } : { className: string, itemsWrapperClassName: string, items: { name: string; iconType: React.ElementType }[] }) => {
+export const ToolBoxItems = ({ items, className, itemsWrapperClassName } : { className: string, itemsWrapperClassName: string, items: { name: string; iconType: React.ComponentType<{ className?: string }> }[] }) => {
     return(
         <div className={`flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] ${className}`}>
             <div className={`flex flex-none py-0.5 gap-6 pr-6 ${itemsWrapperClassName}`}>
