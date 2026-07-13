@@ -15,7 +15,6 @@ import supabase from '../assets/techStack/supabase';
 import tailwind from '../assets/techStack/tailwind';
 import { ToolBoxItems } from '../components/ToolBoxItems';
 import profile from '../assets/profile.png';
-import Experience from '../components/experience';
 
 const tools = [
     { name: 'HTML', iconType: html},
@@ -40,7 +39,7 @@ const tabs = [
     { id: 'education', label: 'Education' },*/
 ] as const;
 
-const educationItems = [
+/*const educationItems = [
     {
         title: 'Academic projects',
         description: 'Built school projects that explore quizzes, learning systems, and interactive user flows.',
@@ -53,7 +52,7 @@ const educationItems = [
         title: 'Self-directed learning',
         description: 'Regularly studies new development tools, design systems, and application patterns.',
     },
-];
+];*/
 
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState<(typeof tabs)[number]['id']>('toolbox');

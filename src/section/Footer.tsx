@@ -1,7 +1,5 @@
-import Gmail from "../assets/gmail";
 import LinkedIn from "../assets/linkedIn";
 import Github from "../assets/techStack/github";
-import { CONTACT_MAILTO } from "../constants/contact";
 import UpArrow from "../assets/upArrow";
 
 const footerLinks = [

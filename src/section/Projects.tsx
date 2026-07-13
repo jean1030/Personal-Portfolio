@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import SpeakSmart from '../assets/SpeakSmart.png';
 import TriVoca from '../assets/TriVoca.png';
 import CRM from '../assets/CRM.png';
 import Quiztopia from '../assets/Quiztopia.png';
