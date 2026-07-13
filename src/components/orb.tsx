@@ -105,10 +105,9 @@ export default function Orb({
       return vec4(colorIn.rgb / (a + 1e-5), a);
     }
     
-    // Tuned to match the site's accent palette: emerald-300 + sky-400.
-    const vec3 baseColor1 = vec3(0.431373, 0.905882, 0.717647);
-    const vec3 baseColor2 = vec3(0.219608, 0.741176, 0.972549);
-    const vec3 baseColor3 = vec3(0.121569, 0.160784, 0.215686);
+    const vec3 baseColor1 = vec3(1.0, 0.82, 0.90);   // pastel pink
+    const vec3 baseColor2 = vec3(0.67, 0.39, 1.0);   // bright violet
+    const vec3 baseColor3 = vec3(0.32, 0.12, 0.68);  // rich purple
     const float innerRadius = 0.6;
     const float noiseScale = 0.65;
     

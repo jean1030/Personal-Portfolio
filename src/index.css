@@ -20,6 +20,32 @@
   }
 }
 
+@keyframes orbit {
+  from {
+    transform: rotate(var(--rotation));
+  }
+  to {
+    transform: rotate(calc(var(--rotation) - 360deg));
+  }
+}
+
+@keyframes counterOrbit {
+  from {
+    transform: rotate(calc(var(--rotation) * -1));
+  }
+  to {
+    transform: rotate(calc((var(--rotation) + 360deg) * -1));
+  }
+}
+
+.animate-orbit {
+  animation: orbit var(--duration) linear infinite;
+}
+
+.animate-counter-orbit {
+  animation: counterOrbit var(--duration) linear infinite;
+}
+
 @layer utilities{
   .container{
     @apply lg:max-w-5xl;

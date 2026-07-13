@@ -7,15 +7,11 @@ import UpArrow from "../assets/upArrow";
 const footerLinks = [
     {
         title: <LinkedIn />,
-        link: "https://www.linkedin.com/in/jennifer-tiongson-54ab0a385/"
+        link: "https://www.linkedin.com/in/jennifer-antonette-tiongson/"
     },
     {
         title: <Github className="fill-white rounded-lg size-7"/>,
         link: "https://github.com/jean1030"
-    },
-    {
-        title: <Gmail />,
-        link: CONTACT_MAILTO
     }
 ];
 

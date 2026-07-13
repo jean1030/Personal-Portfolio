@@ -53,28 +53,26 @@ export default function ProjectDetailTemplate({
         <section className="min-h-screen py-20 bg-gradient-to-b from-gray-900 to-gray-950">
             <div className="container mx-auto px-4 md:px-8">
                 {/* Back Button */}
-                <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 text-sky-400 hover:text-emerald-300 transition mb-8 bg-none border-none cursor-pointer">
+                <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 text-[#EFBFD5] hover:text-[#9D61FD] transition mb-8 bg-none border-none cursor-pointer">
                     <ArrowUp className="w-4 h-4 rotate-[-90deg]" />
-                    Back to Projects
+                    Back
                 </button>
 
                 {/* Header */}
                 <div className="mb-12">
-                    <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text gap-2 mb-4">
+                    <div className="bg-gradient-to-r from-[#EFBFD5] to-[#9D61FD] inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text gap-2 mb-4">
                         <span>{year}</span>
                         <span>|</span>
                         <span>{company}</span>
                     </div>
-                    <h1 className="font-[calistoga] text-4xl md:text-5xl lg:text-6xl mb-6">{title}</h1>
+                    <h1 className="font-[calistoga] text-2xl md:text-3xl lg:text-5xl mb-6">{title}</h1>
                 </div>
 
-                {/* Main Image Slider */}
                 <div className="mb-16 relative group">
                     <div className="rounded-3xl overflow-hidden border border-white/10">
                         <img src={currentImage} alt={`${title} - Image ${currentImageIndex + 1}`} className="w-full h-auto object-cover" />
                     </div>
                     
-                    {/* Navigation Buttons */}
                     {allImages.length > 1 && (
                         <>
                             <button
@@ -92,21 +90,19 @@ export default function ProjectDetailTemplate({
                                 <ChevronRight className="w-6 h-6" />
                             </button>
                             
-                            {/* Dot Indicators */}
                             <div className="flex justify-center gap-2 mt-4">
                                 {allImages.map((_, index) => (
                                     <button
                                         key={index}
                                         onClick={() => setCurrentImageIndex(index)}
                                         className={`w-2 h-2 rounded-full transition duration-300 ${
-                                            index === currentImageIndex ? 'bg-sky-400 w-8' : 'bg-white/30 hover:bg-white/50'
+                                            index === currentImageIndex ? 'bg-[#EFBFD5] w-8' : 'bg-white/30 hover:bg-white/50'
                                         }`}
                                         aria-label={`Go to image ${index + 1}`}
                                     />
                                 ))}
                             </div>
                             
-                            {/* Image Counter */}
                             <div className="text-center text-white/60 text-sm mt-2">
                                 {currentImageIndex + 1} / {allImages.length}
                             </div>
@@ -120,18 +116,18 @@ export default function ProjectDetailTemplate({
                     <div className="lg:col-span-2">
                         {/* Overview */}
                         <div className="mb-12">
-                            <h2 className="font-[calistoga] text-3xl mb-4">Overview</h2>
-                            <p className="text-white/80 text-lg leading-relaxed">{overview}</p>
+                            <h2 className="font-[calistoga] md:text-3xl text-xl mb-4">Overview</h2>
+                            <p className="text-white/80 md:text-lg text-base leading-relaxed">{overview}</p>
                         </div>
 
                         {/* Features */}
                         <div className="mb-12">
-                            <h2 className="font-[calistoga] text-3xl mb-6">Key Features</h2>
+                            <h2 className="font-[calistoga] md:text-3xl text-xl mb-6">Key Features</h2>
                             <ul className="space-y-3">
                                 {features.map((feature, index) => (
                                     <li key={index} className="flex gap-3 items-start">
-                                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 mt-2 flex-shrink-0" />
-                                        <span className="text-white/80">{feature}</span>
+                                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#EFBFD5] to-[#9D61FD] mt-2 flex-shrink-0" />
+                                        <span className="text-white/80 md:text-base text-sm">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -140,7 +136,7 @@ export default function ProjectDetailTemplate({
                         {/* System Users */}
                         {userRoles.length > 0 && (
                             <div className="mb-12">
-                                <h2 className="font-[calistoga] text-3xl mb-6">System User Roles</h2>
+                                <h2 className="font-[calistoga] md:text-3xl text-xl mb-6">System User Roles</h2>
                                 <ul className="space-y-3">
                                     {userRoles.map((userRole) => (
                                         <li key={userRole.role} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
@@ -155,7 +151,7 @@ export default function ProjectDetailTemplate({
                                                 <ul className="mt-3 space-y-2">
                                                     {userRole.capabilities.map((capability) => (
                                                         <li key={capability} className="flex items-start gap-3 text-white/80 text-sm">
-                                                            <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 flex-shrink-0" />
+                                                            <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#EFBFD5] to-[#9D61FD] flex-shrink-0" />
                                                             <span>{capability}</span>
                                                         </li>
                                                     ))}

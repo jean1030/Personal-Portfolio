@@ -8,7 +8,8 @@ const navItems = [
 ]
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState('home')
+  const [activeSection, setActiveSection] = useState('home');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const target = document.getElementById(sectionId)
@@ -64,23 +65,66 @@ export default function Header() {
   }, [])
 
   return (
-  <header className="z-10 fixed w-full flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5 bg-white/5">
-    <a href="#home" className='text-center text-xl font-bold text-white/90 sm:text-left sm:text-2xl'>je-an.dev</a>
-    <nav className='flex w-full flex-wrap items-center justify-center gap-1 rounded-2xl border border-white/15 bg-white/10 p-1 text-sm text-white/80 backdrop-blur sm:w-auto sm:rounded-full sm:p-0.5'>
-      {navItems.map((item) => (
+    <header className="fixed z-10 w-full">
+      <div className="mx-auto flex items-center justify-between border border-white/10 bg-white/10 px-5 py-3 backdrop-blur">
+
         <a
-          key={item.sectionId}
-          href={item.href}
-          onClick={(event) => {
-            event.preventDefault()
-            scrollToSection(item.sectionId)
-          }}
-          className={`nav-item ${activeSection === item.sectionId ? 'bg-white text-gray-900 hover:bg-white/80 hover:text-gray-900' : ''}`}
+          href="#home"
+          className="text-xl font-bold text-white/90"
         >
-          {item.label}
+          je-an.dev
         </a>
-      ))}
-    </nav>
-  </header>
+
+        <nav className="hidden sm:flex items-center gap-1 rounded-full border border-white/15 bg-white/10 p-0.5">
+          {navItems.map((item) => (
+            <a
+              key={item.sectionId}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault()
+                scrollToSection(item.sectionId)
+              }}
+              className={`nav-item ${
+                activeSection === item.sectionId
+                  ? "bg-white text-gray-900 hover:bg-white/80 hover:text-gray-900"
+                  : ""
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white sm:hidden"
+        >
+          ☰
+        </button>
+      </div>
+
+      {menuOpen && (
+        <div className="mt-3 rounded-2xl border border-white/10 bg-white/10 backdrop-blur sm:hidden ">
+          {navItems.map((item) => (
+            <a
+              key={item.sectionId}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault()
+                scrollToSection(item.sectionId)
+                setMenuOpen(false)
+              }}
+              className={`block px-5 py-4 rounded-xl text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300 ${
+                activeSection === item.sectionId
+                  ? "bg-white text-gray-900 hover:bg-white/80 hover:text-gray-900"
+                  : ""
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </header>
   )
 }
